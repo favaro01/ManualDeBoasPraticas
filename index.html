@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Boas Práticas - DIT CEJAM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cejamAzul: '#162b47',
+                        cejamTurquesa: '#00adb8',
+                        cejamCinza: '#384b5e',
+                    },
+                    fontFamily: {
+                        exo: ['Exo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Exo', sans-serif; scroll-behavior: smooth; }
+        .bg-pattern { background-color: #f8f9fa; background-image: radial-gradient(#00adb8 0.5px, transparent 0.5px); background-size: 20px 20px; opacity: 0.1; }
+       
+        /* Ajuste do Mockup para caber sem scroll */
+        .app-screen {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 6px solid #384b5e;
+            border-radius: 32px;
+            overflow: hidden;
+            background: #F2F5F8;
+            width: 220px;
+            height: 400px;
+            position: relative;
+            flex-shrink: 1;
+        }
+       
+        .app-header-gradient {
+            background: linear-gradient(180deg, #00adb8 0%, #008a94 100%);
+            height: 60px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+       
+        .ring-chart {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: conic-gradient(#00adb8 19%, #e2e8f0 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       
+        .ring-inner {
+            width: 38px;
+            height: 38px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+       
+        .detailed-list li { position: relative; padding-left: 20px; margin-bottom: 8px; }
+        .detailed-list li::before { content: "•"; position: absolute; left: 0; color: #00adb8; font-weight: bold; }
+    </style>
+</head>
+<body class="bg-gray-50 text-cejamAzul">
+
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-cejamAzul text-white py-24 px-6 overflow-hidden">
+        <div class="bg-pattern absolute inset-0"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <h2 class="text-cejamTurquesa font-bold text-lg mb-2 tracking-widest uppercase">Departamento de Inovação e Tecnologia</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">MANUAL DE <br><span class="text-cejamTurquesa">BOAS PRÁTICAS</span></h1>
+            <div class="w-32 h-2 bg-cejamTurquesa mb-8"></div>
+            <p class="text-2xl font-light opacity-80">Nova Sede Administrativa: Nosso Espaço. Nossa Cultura.</p>
+        </div>
+    </header>
+
+
+    <main class="max-w-6xl mx-auto px-6 py-16 space-y-24">
+
+
+        <!-- 01 & 02: CONCEITO E 5S -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="border-l-8 border-cejamTurquesa pl-8 flex flex-col justify-center">
+                <span class="text-cejamTurquesa font-black text-5xl opacity-20 mb-2">01</span>
+                <h3 class="text-3xl font-bold mb-6 uppercase">Um Novo Espaço, Uma Nova Etapa</h3>
+                <p class="text-cejamCinza text-lg leading-relaxed">
+                    A mudança representa mais do que um endereço diferente. É a oportunidade de fortalecer a cultura que queremos viver: organizada, respeitosa, eficiente e colaborativa.
+                    <strong>O espaço é compartilhado. O cuidado também.</strong>
+                </p>
+            </div>
+            <div class="bg-cejamAzul p-10 rounded-2xl text-white shadow-xl">
+                <span class="text-cejamTurquesa font-black text-4xl opacity-30 mb-2 text-right block">02</span>
+                <h3 class="text-2xl font-bold mb-6 uppercase border-b border-cejamTurquesa/30 pb-4">Cultura 5S na Prática</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><strong>1. Utilizar com consciência:</strong> Manter apenas o necessário para a operação.</li>
+                    <li><strong>2. Organizar com propósito:</strong> Um lugar para cada coisa, agilizando processos.</li>
+                    <li><strong>3. Cuidar do ambiente:</strong> Preservar o espaço limpo e funcional.</li>
+                    <li><strong>4. Seguir o padrão comum:</strong> Agir de forma alinhada às regras do coletivo.</li>
+                    <li><strong>5. Praticar disciplina diária:</strong> A constância gera a cultura.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- 03: RESERVA DE ESTAÇÕES -->
+        <section class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <span class="text-cejamTurquesa font-black text-5xl opacity-20">03</span>
+                    <h3 class="text-3xl font-bold mb-6 uppercase">Reserva de Estações</h3>
+                    <p class="text-cejamCinza text-lg mb-8 leading-relaxed">
+                        Nosso modelo é compartilhado. A reserva pelo aplicativo <strong>CPM - Meu Lugar</strong> é obrigatória. Organização começa no planejamento.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border-l-4 border-cejamAzul">
+                            <span class="bg-cejamAzul text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
+                            <span class="font-bold uppercase text-sm tracking-tight">Reserve antes de sair de casa</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-gray-50 p-4 rounded-xl border-l-4 border-cejamAzul">
+                            <span class="bg-cejamAzul text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</span>
+                            <span class="font-bold uppercase text-sm tracking-tight">Faça o Check-in ao chegar</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-red-50 p-4 rounded-xl border-l-4 border-red-500 text-red-700">
+                            <span class="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</span>
+                            <span class="font-bold uppercase text-sm tracking-tight">Cancele se não puder comparecer</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mockups ajustados para evitar scroll -->
+                <div class="lg:w-1/2 flex flex-wrap justify-center gap-4 py-4">
+                    <!-- Dashboard Mockup -->
+                    <div class="app-screen">
+                        <div class="app-header-gradient p-3 text-white">
+                            <p class="font-bold text-[10px] mt-1 text-center">CPM - Meu Lugar</p>
+                        </div>
+                        <div class="p-3 -mt-4">
+                            <div class="bg-white rounded-xl p-3 shadow-sm mb-3">
+                                <p class="text-center text-[6px] font-bold text-gray-400 uppercase mb-2">Ocupação do prédio</p>
+                                <div class="flex justify-center"><div class="ring-chart"><div class="ring-inner"><span class="text-[10px] font-bold">19%</span></div></div></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white rounded-lg p-2 shadow-sm text-center"><p class="text-[6px] font-bold text-cejamTurquesa uppercase">Reservados</p><p class="font-bold text-[10px]">59</p></div>
+                                <div class="bg-white rounded-lg p-2 shadow-sm text-center"><p class="text-[6px] font-bold text-gray-400 uppercase">Livres</p><p class="font-bold text-[10px]">259</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- List Mockup -->
+                    <div class="app-screen">
+                        <div class="app-header-gradient p-3 text-white">
+                            <p class="font-bold text-[10px] mt-1 text-center">Agendamento</p>
+                        </div>
+                        <div class="p-3 -mt-4 space-y-2">
+                            <div class="bg-white rounded-lg p-2 shadow-sm border-l-4 border-yellow-400 flex justify-between items-center">
+                                <div><p class="font-bold text-[8px]">9º Andar</p><p class="text-[6px] text-gray-400">144 disponíveis</p></div>
+                                <div class="w-4 h-4 bg-yellow-50 rounded-full text-yellow-600 font-bold text-[7px] flex items-center justify-center">09</div>
+                            </div>
+                            <div class="bg-white rounded-lg p-2 shadow-sm border-l-4 border-purple-500 flex justify-between items-center">
+                                <div><p class="font-bold text-[8px]">8º Andar</p><p class="text-[6px] text-gray-400">174 disponíveis</p></div>
+                                <div class="w-4 h-4 bg-purple-50 rounded-full text-purple-600 font-bold text-[7px] flex items-center justify-center">08</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 04 & 05: ESTAÇÕES E ARMÁRIOS -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="p-8 bg-white rounded-2xl border-t-8 border-cejamTurquesa shadow-sm">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-4xl font-black text-cejamTurquesa">04</span>
+                    <h4 class="text-xl font-bold uppercase">Estações de Trabalho</h4>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <p class="font-bold text-xs uppercase text-cejamAzul mb-2 tracking-wider">Ocupação</p>
+                        <ul class="detailed-list text-xs text-cejamCinza leading-relaxed">
+                            <li>Use apenas a mesa reservada.</li>
+                            <li>Não ocupe posições extras com pertences.</li>
+                            <li>Mantenha a mesa organizada durante o dia.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xs uppercase text-cejamAzul mb-2 tracking-wider">Clean Desk</p>
+                        <ul class="detailed-list text-xs text-cejamCinza leading-relaxed">
+                            <li>Remova todos os objetos ao sair.</li>
+                            <li>Reponha a cadeira e alinhe monitores.</li>
+                            <li>Não altere conexões fixas de hardware.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 bg-cejamAzul rounded-2xl text-white shadow-xl relative overflow-hidden">
+                <div class="flex items-center gap-4 mb-6 relative z-10">
+                    <span class="text-4xl font-black text-cejamTurquesa">05</span>
+                    <h4 class="text-xl font-bold uppercase">Armários Rotativos</h4>
+                </div>
+                <div class="relative z-10">
+                    <p class="text-xs opacity-80 mb-4">Apoio temporário sem titularidade fixa. Uso restrito à permanência no prédio.</p>
+                    <ul class="detailed-list text-xs space-y-3 mb-6">
+                        <li>Esvazie o espaço ao final do expediente.</li>
+                        <li><strong>Proibido pernoite</strong> de objetos guardados.</li>
+                        <li class="text-cejamTurquesa font-bold">Chave deve permanecer no armário após o uso.</li>
+                        <li class="bg-red-500/20 text-red-300 p-2 rounded font-black border border-red-500/30 inline-block">NÃO LEVE A CHAVE EMBORA.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 06, 07, 08: GRUPO OPERACIONAL -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl border-t-4 border-cejamTurquesa shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl font-black text-cejamTurquesa">06</span>
+                    <h4 class="text-lg font-bold uppercase">Alimentação</h4>
+                </div>
+                <ul class="detailed-list text-xs text-cejamCinza leading-relaxed space-y-3">
+                    <li><strong>Estações não são para refeições:</strong> Utilize exclusivamente os espaços designados.</li>
+                    <li>Evite alimentos nas mesas para manter o padrão de higiene.</li>
+                    <li><strong>Preserve os carpetes:</strong> Cuidado extremo com resíduos e líquidos.</li>
+                </ul>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-2xl border-t-4 border-cejamTurquesa shadow-inner">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl font-black text-cejamTurquesa">07</span>
+                    <h4 class="text-lg font-bold uppercase text-cejamAzul">Copa: Coletividade</h4>
+                </div>
+                <ul class="detailed-list text-[11px] text-cejamCinza leading-relaxed space-y-2">
+                    <li>Utilize utensílios com cuidado. <strong>Lave, seque e guarde</strong> imediatamente.</li>
+                    <li>Mantenha as bancadas livres para os colegas.</li>
+                    <li><strong>Frigobar:</strong> Não deixe alimentos de um dia para o outro. Identifique seus itens e descarte o que não usar diariamente.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border-t-4 border-cejamTurquesa shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl font-black text-cejamTurquesa">08</span>
+                    <h4 class="text-lg font-bold uppercase">Reuniões</h4>
+                </div>
+                <ul class="detailed-list text-xs text-cejamCinza leading-relaxed space-y-3">
+                    <li><strong>Foco e objetividade:</strong> Encontros produtivos com tempo definido.</li>
+                    <li>Respeite rigorosamente os horários da agenda.</li>
+                    <li>Deixe organizada para o próximo grupo e o quadro limpo.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- 09: DESTAQUE DESCOMPRESSÃO -->
+        <section class="bg-cejamAzul text-white p-6 md:p-12 rounded-3xl md:rounded-[40px] shadow-2xl relative overflow-hidden">
+            <div class="bg-pattern absolute inset-0 opacity-5"></div>
+            <div class="relative z-10">
+                <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-8">
+                    <span class="text-5xl md:text-6xl font-black text-cejamTurquesa leading-none">09</span>
+                    <div>
+                        <h4 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">Áreas de Convivência e Descompressão</h4>
+                        <p class="text-cejamTurquesa font-bold text-xs md:text-sm tracking-widest uppercase mt-1">Um espaço para todos os colaboradores</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="space-y-6">
+                        <p class="text-base md:text-lg leading-relaxed opacity-90">São espaços essenciais para pausas e interação, criados para recarregar as energias sem perder o contexto corporativo.</p>
+                        <div class="p-5 md:p-6 bg-white/5 rounded-2xl border border-white/10 italic text-xs md:text-sm">
+                            "Ambiente leve não significa ambiente descuidado. O zelo com este espaço reflete o nosso respeito mútuo."
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-6 md:p-8 rounded-2xl md:rounded-3xl backdrop-blur-sm border border-white/5">
+                        <h5 class="font-bold text-[10px] md:text-xs uppercase text-cejamTurquesa mb-4 tracking-widest border-b border-white/10 pb-2">Compromissos do Time:</h5>
+                        <ul class="detailed-list text-xs md:text-sm space-y-4">
+                            <li><strong>Volume de Voz:</strong> Respeite o foco de quem está nas estações vizinhas.</li>
+                            <li><strong>Mobiliário:</strong> Preserve os itens de descanso e interação como se fossem seus.</li>
+                            <li><strong>Zelo Final:</strong> Organize o local e recolha seus resíduos antes de retornar ao trabalho.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 10 & 11: POSTURA E TECNOLOGIA -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- 10. Postura Predial -->
+            <div class="bg-white p-8 rounded-2xl border-t-4 border-cejamAzul shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl font-black text-cejamAzul/40">10</span>
+                    <h4 class="text-lg font-bold uppercase text-cejamAzul">Postura em Todo o Prédio</h4>
+                </div>
+                <ul class="detailed-list text-xs text-cejamCinza leading-relaxed space-y-3">
+                    <li>Corredores, elevadores, recepção e demais áreas são extensões do nosso ambiente profissional.</li>
+                    <li>Mantenha comportamento adequado.</li>
+                    <li>Preserve a organização visual.</li>
+                    <li>Evite utilizar espaços comuns como extensão da estação de trabalho.</li>
+                    <li class="font-bold">O prédio representa nossa imagem institucional.</li>
+                </ul>
+            </div>
+            <!-- 11. Tecnologia -->
+            <div class="bg-white p-8 rounded-2xl border-t-4 border-cejamAzul shadow-sm">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-2xl font-black text-cejamAzul/40">11</span>
+                    <h4 class="text-lg font-bold uppercase text-cejamAzul">Tecnologia e Recursos</h4>
+                </div>
+                <ul class="detailed-list text-xs text-cejamCinza leading-relaxed space-y-3">
+                    <li>Utilize equipamentos com responsabilidade.</li>
+                    <li>Evite improvisos.</li>
+                    <li>Reporte falhas.</li>
+                    <li>Preserve o patrimônio comum.</li>
+                    <li class="font-bold">Cuidar dos recursos comuns é parte fundamental do nosso compromisso como TI e colaborador.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- 12: JOVEM APRENDIZ -->
+        <section class="p-8 bg-gray-100 rounded-2xl border-l-8 border-cejamAzul flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <span class="text-3xl font-black text-cejamAzul">12</span>
+                <div>
+                    <h4 class="text-lg font-bold uppercase">Espaço Jovem Aprendiz</h4>
+                    <p class="text-xs text-cejamCinza">Área exclusiva para pausa e alimentação do grupo.</p>
+                </div>
+            </div>
+            <div class="flex-grow max-w-xl text-[11px] text-cejamCinza leading-relaxed bg-white/50 p-4 rounded-xl border border-cejamAzul/10">
+                Este espaço é de <strong>uso restrito</strong> e sua exclusividade deve ser respeitada por todo o time. Todas as diretrizes de boas práticas e 5S valem integralmente aqui também. Manter este local organizado é um compromisso de todos.
+            </div>
+        </section>
+
+
+        <!-- 13: ENCERRAMENTO -->
+        <section class="py-16 text-center border-t-2 border-cejamTurquesa">
+            <h2 class="text-cejamTurquesa font-black text-6xl mb-12 uppercase tracking-tighter">13. Nosso Princípio</h2>
+            <div class="max-w-4xl mx-auto mb-10">
+                <p class="text-3xl md:text-5xl font-light leading-tight">
+                    "Cultura não se constrói com placas na parede. <br>
+                    <span class="font-extrabold text-cejamAzul">Se constrói com prática diária."</span>
+                </p>
+            </div>
+            <div class="w-24 h-2 bg-cejamTurquesa mx-auto mb-10"></div>
+            <p class="text-cejamCinza text-xl italic max-w-2xl mx-auto leading-relaxed">
+                Este modelo funciona quando cada um faz a sua parte. <br>Não depende de fiscalização constante, depende de consciência.
+            </p>
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-cejamAzul text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h4 class="text-cejamTurquesa font-bold text-2xl mb-1">CEJAM</h4>
+                <p class="text-xs tracking-widest uppercase opacity-60">Inovação e Tecnologia</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="text-right hidden md:block">
+                    <p class="text-[10px] font-bold text-cejamTurquesa uppercase mb-1">Redes Sociais</p>
+                    <p class="text-sm font-semibold tracking-tight">LinkedIn: CEJAM Oficial</p>
+                </div>
+                <div class="w-12 h-12 bg-cejamTurquesa rounded-xl flex items-center justify-center">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto h-1 bg-cejamTurquesa mt-10"></div>
+    </footer>
+
+
+</body>
+</html>
